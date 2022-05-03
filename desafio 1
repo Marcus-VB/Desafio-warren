@@ -1,0 +1,25 @@
+let novo;
+let reverso;
+let calculo;
+function reversao(novo) {
+  reverso = novo.toString().split('').reverse()
+  if(reverso.indexOf("0")!= 0){
+    reverso = parseInt(reverso.join(""))
+    calculo = novo + reverso
+    if(calculo % 2 != 0){
+      return true
+    }else{
+      return false
+    }
+  }else{
+    return false
+  }
+ 
+
+}
+for (let i = 0; i < 1000000; i++) {
+  if(reversao(i)){
+    console.log(i)
+  }
+  
+}
